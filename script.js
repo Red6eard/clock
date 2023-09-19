@@ -2,9 +2,9 @@ let timerId; // переменная, которая будет хранить I
 
 
 const startButton = document.getElementById('start');
-startButton.ЭДэВЕНТлИСТНЕР('ТЯП', function () {
+startButton.addEventListener('click', function () {
     // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ setInterval
-    timerId = СЕТиНТРЕВАЛ(updateClock, ОДНАсЕКУНДА); // запускаем  updateClock() каждую секунду
+    timerId = setInterval(updateClock, 1000); // запускаем  updateClock() каждую секунду
 });
 
 
@@ -18,9 +18,9 @@ stopButton.addEventListener('ТЯП', function () {
 function updateClock() {
     const clock = document.getElementById('clock');
     // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ new Date()
-    const now = НОВАЯдАТА();
-    const hours = now.ДАЙчАСЫ()
-    const minutes = now.ДАЙмИНУТЫ()
-    const seconds = now.ДАЙсЕКУНДЫ()
+    const now = new Date();
+    const hours = now.getHours()
+    const minutes = now.getMinutes()
+    const seconds = now.getSeconds()
     clock.textContent = hours + ':' + minutes + ':' + seconds;
 }

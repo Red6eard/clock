@@ -1,7 +1,7 @@
 let timerId; // переменная, которая будет хранить ID таймера
 
 
-const startButton = ДОКУМЕНТ.ГЕТэЛЕМЕНТбАЙаЙДИ(КАКОЙ - ТО);
+const startButton = document.getElementById('start');
 startButton.ЭДэВЕНТлИСТНЕР('ТЯП', function () {
     // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ setInterval
     timerId = СЕТиНТРЕВАЛ(updateClock, ОДНАсЕКУНДА); // запускаем  updateClock() каждую секунду

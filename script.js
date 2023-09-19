@@ -8,8 +8,8 @@ startButton.addEventListener('click', function () {
 });
 
 
-const stopButton = ДОКУМЕНТ.ГЕТэЛЕМЕНТбАЙаЙДИ(КАКОЙ - ТО);
-stopButton.addEventListener('ТЯП', function () {
+const stopButton = document.getElementById('stop');
+stopButton.addEventListener('click', function () {
     // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ clearInterval
     clearInterval(timerId); // останавливаем таймер
 });
@@ -22,5 +22,5 @@ function updateClock() {
     const hours = now.getHours()
     const minutes = now.getMinutes()
     const seconds = now.getSeconds()
-    clock.textContent = hours + ':' + minutes + ':' + seconds;
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
 }
